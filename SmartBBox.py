@@ -1,3 +1,8 @@
+#MenuTitle: Smart BBox
+__doc__="""
+自動新增圖層和配對智慧型部件長寬軸。
+"""
+
 # 新增圖層部分
 
 thisFont = Glyphs.font
@@ -57,3 +62,4 @@ for layer in Font.selectedLayers:
 	layer.parent.layers[1].smartComponentPoleMapping[smartHeightAxis.id] = 2 # 窄圖層 長度值設定
 	layer.parent.layers[2].smartComponentPoleMapping[smartWidthAxis.id] = 2 # 扁圖層 寬度值設定
 	layer.parent.layers[2].smartComponentPoleMapping[smartHeightAxis.id] = 1 # 扁圖層 長度值設定
+
