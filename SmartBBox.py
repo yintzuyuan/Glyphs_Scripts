@@ -6,7 +6,7 @@ __doc__="""
 miniWidth_name = "Wilted" # 最窄圖層名稱
 miniHeight_name = "Flat" # 最扁圖層名稱
 miniNum_Value = 0 # 變化軸最小值
-maxNum_Value = 1000 # 變化軸最大值
+maxNum_Value = 100 # 變化軸最大值
 
 # 新增圖層部分
 
