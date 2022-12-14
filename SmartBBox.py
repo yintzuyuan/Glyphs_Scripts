@@ -29,7 +29,7 @@ for thisGlyph in [l.parent for l in thisFont.selectedLayers]:
 		newLayer = thisGlyph.layers[currentMaster.id].copy()
 		newLayer.associatedMasterId = currentMaster.id
 		newLayer.name = miniWidth_name
-		print("新增圖層：" % newLayer.name)
+		print("新增圖層：%s" % newLayer.name)
 		thisGlyph.layers.append(newLayer)
 
 	# 檢查是否有扁圖層
@@ -45,7 +45,7 @@ for thisGlyph in [l.parent for l in thisFont.selectedLayers]:
 		newLayer = thisGlyph.layers[currentMaster.id].copy()
 		newLayer.associatedMasterId = currentMaster.id
 		newLayer.name = miniHeight_name
-		print("新增圖層：" % newLayer.name)
+		print("新增圖層：%s" % newLayer.name)
 		thisGlyph.layers.append(newLayer)
 
 
