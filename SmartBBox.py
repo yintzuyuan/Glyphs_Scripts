@@ -47,9 +47,9 @@ class SmartBBox(object):
 			print("無法載入用戶偏好設定，將重置為預設值。")
 
 	def checkboxCallback(self, sender):
-		# 根据复选框的状态启用或禁用文本输入字段
+		# 根據複選框的狀態啟用或禁用文字輸入欄位
 		self.w.editText_5.enable(sender.get())
-		# 保存复选框的新状态到用户偏好设置
+		# 將復選框的新狀態保存到用戶偏好設定
 		Glyphs.defaults["com.YinTzuYuan.SmartBBox.checkbox_5"] = sender.get()
 
 	def SavePreferences(self, sender): # 保存偏好設定
