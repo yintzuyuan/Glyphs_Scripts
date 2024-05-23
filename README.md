@@ -21,22 +21,22 @@
 
 這兩天花了一些時間研究 Glyphs 的腳本語法，對於去年曾經提到智慧型部件設定繁瑣的問題終於解決了。在此分享一下我的解決歷程。
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝
+---
 
 在我去年對於這個問題錄製了 [發問影片](https://youtu.be/A97dZtYgmAA) 總之就是為了製作可變形的智慧型部件需要新增圖層、為它們命名、設定軸屬性和配對圖層，太多繁瑣的步驟希望能透過腳本快速完成。
 
 這是我在 Glyphs 論壇的 [發問主題](https://forum.glyphsapp.com/t/about-the-height-and-width-values-of-smart-component/20402)。
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝
+---
 
 我把腳本拆成兩個部分解決，圖層部分以及智慧型部件設定的部分。
 
-－－－－－－－－－－－－－
+---
 
 圖層部分我參考了 [mekkablue 腳本集](https://github.com/mekkablue/Glyphs-Scripts) 裡面的 Insert Layers 腳本（在 Interpolation 分類中），作者將選項寫成一套ＵＩ，我只截取了生成的部分改成符合自己需求的語法
 
 
-－－－－－－－－－－－－－
+---
 
 最後是智慧型部件設定的部分，起先我找到了官網提供的語法集，裡面確實提供了我需要的功能：[設定軸屬性](https://docu.glyphsapp.com/#GSGlyph.smartComponentAxes) 和 [配對圖層](https://docu.glyphsapp.com/#GSLayer.smartComponentPoleMapping)。
 
@@ -48,3 +48,11 @@
 裡面提供的語法成為我需要的腳本最後一塊拼圖，這個腳本終於能在未來的造字過程中成功幫我省下很多時間。
 
 </details>
+
+### 組件垂直居中
+
+- 將選取字符的所有圖層中，智慧組件垂直對齊至中心點（座標軸x=0）。
+
+### 組件水平居中
+
+- 將選取字符的所有圖層中，智慧組件水平對齊至中心點（座標軸y=0）。

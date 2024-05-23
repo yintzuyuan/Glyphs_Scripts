@@ -1,4 +1,4 @@
-#MenuTitle: 部件垂直居中
+#MenuTitle: 組件垂直居中
 # -*- coding: utf-8 -*-
 from __future__ import print_function, division, unicode_literals
 __doc__="""
