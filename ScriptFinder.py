@@ -1,4 +1,4 @@
-# MenuTitle: 腳本搜尋器
+# MenuTitle: 腳本搜尋器...
 # -*- coding: utf-8 -*-
 __doc__="""
 搜尋並執行 Glyphs 腳本的工具。
@@ -60,7 +60,7 @@ class ScriptFinderTool:
         scripts_info = self.read_py_files_in_directory(directory_path)
 
         # 從結果中移除工具自身的腳本
-        scripts_info = [script for script in scripts_info if script['script_name'] != "腳本搜尋器"]
+        scripts_info = [script for script in scripts_info if script['script_name'] != "腳本搜尋器..."]
 
         return scripts_info
 
