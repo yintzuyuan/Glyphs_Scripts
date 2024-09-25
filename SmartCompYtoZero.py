@@ -1,4 +1,4 @@
-#MenuTitle: 組件水平居中
+# MenuTitle: 組件水平居中
 # -*- coding: utf-8 -*-
 from __future__ import print_function, division, unicode_literals
 __doc__="""
