@@ -1,4 +1,4 @@
-# MenuTitle: 新增筆劃屬性
+# MenuTitle: 新增筆劃屬性...
 # -*- coding: utf-8 -*-
 __doc__ = """
 向選取的路徑新增筆劃屬性。
@@ -128,7 +128,7 @@ class StrokeAttributesDialog:
             if len(selectedLayers) > 1:
                 font.enableUpdateInterface()
 
-            # 強制重繪所有視圖
+            # 強制重繪所有畫面
             Glyphs.redraw()
 
         if add:
