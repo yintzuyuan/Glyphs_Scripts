@@ -108,9 +108,9 @@ class StrokeAttributesDialog:
                             if strokeHeight is not None:
                                 path.attributes['strokeHeight'] = strokeHeight
                         else:
-                            # 關閉 fill 和 mask 屬性
-                            path.attributes['fill'] = False
-                            path.attributes['mask'] = False
+                            # # 關閉 fill 和 mask 屬性
+                            # path.attributes['fill'] = False
+                            # path.attributes['mask'] = False
                             # 移除筆劃屬性
                             if 'strokeWidth' in path.attributes:
                                 del path.attributes['strokeWidth']
