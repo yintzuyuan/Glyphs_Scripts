@@ -14,10 +14,18 @@ import os
 from Foundation import NSURL
 from AppKit import NSWorkspace
 import traceback
+import objc
 
 class ScriptFinderTool:
     def __init__(self):
         self.debug_mode = False  # 調試模式開關
+
+        # 根據 Glyphs 版本獲取 GSScriptingHandler
+        if int(Glyphs.versionNumber) == 3:
+            self.GSScriptingHandler = objc.lookUpClass("GSScriptingHandler")
+        else:
+            self.GSScriptingHandler = objc.lookUpClass("GSMenu")
+            
         # 取得腳本資訊
         self.scripts_info = self.get_scripts_info()
 
