@@ -12,11 +12,12 @@ import objc
 from Foundation import NSRect, NSMakeRect, NSObject, NSString, NSTextField, NSButton
 from AppKit import NSWindow, NSApp, NSView, NSAlert, NSTextFieldCell, NSSmallControlSize
 from AppKit import NSWindowStyleMaskTitled, NSWindowStyleMaskClosable
+from AppKit import NSFloatingWindowLevel
 
-class StrokeAttributesDialogNative(NSObject):
+class YTYStrokeAttributesDialog(NSObject):
     
     def init(self):
-        self = objc.super(StrokeAttributesDialogNative, self).init()
+        self = objc.super(YTYStrokeAttributesDialog, self).init()
         if self:
             # 定義預設值儲存的鍵
             self.keyPrefix = "com.YinTzuYuan.StrokeAttributes"
@@ -36,6 +37,13 @@ class StrokeAttributesDialogNative(NSObject):
                 2, False
             )
             self.window.setTitle_("新增筆劃屬性")
+            
+            # 設定視窗層級為浮動層級，使其始終顯示在其他視窗上方
+            self.window.setLevel_(NSFloatingWindowLevel)
+            
+            # 確保視窗始終在前
+            self.window.setHidesOnDeactivate_(False)
+            self.window.setCollectionBehavior_(1 << 7) # NSWindowCollectionBehaviorMoveToActiveSpace
             
             # 建立主視圖
             self.contentView = NSView.alloc().initWithFrame_(NSMakeRect(0, 0, windowWidth, windowHeight))
@@ -200,4 +208,4 @@ class StrokeAttributesDialogNative(NSObject):
         print("%s，處理了 %d 個字符的 %d 條路徑。" % (statusMessage, processed_glyphs, processed_paths))
 
 # 執行腳本
-dialog = StrokeAttributesDialogNative.alloc().init()
+dialog = YTYStrokeAttributesDialog.alloc().init()
