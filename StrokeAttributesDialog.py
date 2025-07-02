@@ -1,5 +1,6 @@
 # MenuTitle: 新增筆劃屬性...
 # -*- coding: utf-8 -*-
+from __future__ import print_function, division, unicode_literals
 __doc__ = """
 向選取的路徑新增筆劃屬性。
 如果沒有選取路徑，則處理目前字符的所有路徑。

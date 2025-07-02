@@ -1,5 +1,6 @@
 # MenuTitle: 腳本搜尋器...
 # -*- coding: utf-8 -*-
+from __future__ import print_function, division, unicode_literals
 __doc__="""
 搜尋並執行 Glyphs 腳本的工具。
 可以搜尋腳本名稱、作者和描述，並直接執行選中的腳本。

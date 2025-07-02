@@ -1,6 +1,7 @@
 # encoding: utf-8
 # WindowPositionManager.py
 #MenuTitle: 還原工具視窗位置
+from __future__ import print_function, division, unicode_literals
 
 from Foundation import NSPoint, NSSize, NSRect
 from AppKit import NSApp, NSRunLoop, NSDate, NSEvent, NSEventModifierFlagOption
