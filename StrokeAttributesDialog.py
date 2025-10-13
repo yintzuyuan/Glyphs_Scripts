@@ -4,7 +4,7 @@ from __future__ import print_function, division, unicode_literals
 __doc__ = """
 向選取的路徑新增筆劃屬性。
 如果沒有選取路徑，則處理目前字符的所有路徑。
-可以同時處理多個選取字符和多個圖層。
+處理範圍限定於當前主板中的所有圖層。
 """
 
 from GlyphsApp import *
@@ -74,6 +74,13 @@ class StrokeAttributesDialog:
             print("沒有選取字符")
             return
 
+        # 取得當前主板 ID
+        currentMaster = font.selectedFontMaster
+        if not currentMaster:
+            print("無法取得當前主板")
+            return
+        masterId = currentMaster.id
+
         processed_paths = 0
         processed_glyphs = 0
 
@@ -91,8 +98,12 @@ class StrokeAttributesDialog:
                 # 開始記錄變更
                 glyph.beginUndo()
 
-                # 處理所有圖層
+                # 只處理當前主板中的所有圖層
                 for l in glyph.layers:
+                    # 跳過不屬於當前主板的圖層
+                    if l.associatedMasterId != masterId:
+                        continue
+
                     # 如果是在編輯模式且只有一個圖層被選取，則檢查路徑選取狀態
                     # 否則，處理所有路徑(字符選取模式)
                     if len(selectedLayers) == 1 and layer == font.selectedLayers[0]:
